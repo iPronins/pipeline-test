@@ -13,6 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Install lftp
+        run: sudo apt-get install lftp -y
+
+
       - name: Set up FTP
         run: echo "set ssl:verify-certificate no" >> $HOME/.lftprc
 
